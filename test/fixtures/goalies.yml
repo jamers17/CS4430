@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  playoffs: false
+  year: 2015-04-16
+  player: MyText
+  age: 1
+  gp: 1
+  w: 1
+  l: 1
+  ot: 1
+  ga: 1
+  sa: 1
+  sv: 1
+  sv%: 9.99
+  gaa: 9.99
+  so: 1
+  minutes: 1
+  g: 1
+  a: 1
+  pts: 1
+  pim: 1
+  firstname: MyString
+  lastname: MyString
+
+two:
+  playoffs: false
+  year: 2015-04-16
+  player: MyText
+  age: 1
+  gp: 1
+  w: 1
+  l: 1
+  ot: 1
+  ga: 1
+  sa: 1
+  sv: 1
+  sv%: 9.99
+  gaa: 9.99
+  so: 1
+  minutes: 1
+  g: 1
+  a: 1
+  pts: 1
+  pim: 1
+  firstname: MyString
+  lastname: MyString

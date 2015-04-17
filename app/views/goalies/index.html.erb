@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Goalies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Playoffs</th>
+      <th>Year</th>
+      <th>Player</th>
+      <th>Age</th>
+      <th>Gp</th>
+      <th>W</th>
+      <th>L</th>
+      <th>Ot</th>
+      <th>Ga</th>
+      <th>Sa</th>
+      <th>Sv</th>
+      <th>Svp</th>
+      <th>Gaa</th>
+      <th>So</th>
+      <th>Minutes</th>
+      <th>G</th>
+      <th>A</th>
+      <th>Pts</th>
+      <th>Pim</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @goalies.each do |goaly| %>
+      <tr>
+        <td><%= goaly.playoffs %></td>
+        <td><%= goaly.year %></td>
+        <td><%= goaly.player %></td>
+        <td><%= goaly.age %></td>
+        <td><%= goaly.gp %></td>
+        <td><%= goaly.w %></td>
+        <td><%= goaly.l %></td>
+        <td><%= goaly.ot %></td>
+        <td><%= goaly.ga %></td>
+        <td><%= goaly.sa %></td>
+        <td><%= goaly.sv %></td>
+        <td><%= goaly.svp %></td>
+        <td><%= goaly.gaa %></td>
+        <td><%= goaly.so %></td>
+        <td><%= goaly.minutes %></td>
+        <td><%= goaly.g %></td>
+        <td><%= goaly.a %></td>
+        <td><%= goaly.pts %></td>
+        <td><%= goaly.pim %></td>
+        <td><%= goaly.firstname %></td>
+        <td><%= goaly.lastname %></td>
+        <td><%= link_to 'Show', goaly %></td>
+        <td><%= link_to 'Edit', edit_goaly_path(goaly) %></td>
+        <td><%= link_to 'Destroy', goaly, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Goalie', new_goaly_path %>
