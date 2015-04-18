@@ -1,64 +1,64 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Goalies</h1>
+<h1>Goaltenders, 1943-2013</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Playoffs</th>
-      <th>Year</th>
-      <th>Player</th>
-      <th>Age</th>
-      <th>Team</th>
-      <th>Gp</th>
-      <th>W</th>
-      <th>L</th>
-      <th>Ot</th>
-      <th>Ga</th>
-      <th>Sa</th>
-      <th>Sv</th>
-      <th>Svp</th>
-      <th>Gaa</th>
-      <th>So</th>
-      <th>Minutes</th>
-      <th>G</th>
-      <th>A</th>
-      <th>Pts</th>
-      <th>Pim</th>
-      <th>Firstname</th>
-      <th>Lastname</th>
+      <th><%= sortable "playoffs" %></th>
+      <th><%= sortable "year" %></th>
+      <th><%= sortable "player" %></th>
+      <th><%= sortable "age" %></th>
+      <th><%= sortable "team" %></th>
+      <th><%= sortable "gp" %></th>
+      <th><%= sortable "w" %></th>
+      <th><%= sortable "l" %></th>
+      <th><%= sortable "ot" %></th>
+      <th><%= sortable "ga" %></th>
+      <th><%= sortable "sa" %></th>
+      <th><%= sortable "sv" %></th>
+      <th><%= sortable "svp" %></th>
+      <th><%= sortable "gaa" %></th>
+      <th><%= sortable "so" %></th>
+      <th><%= sortable "minutes" %></th>
+      <th><%= sortable "g" %></th>
+      <th><%= sortable "a" %></th>
+      <th><%= sortable "pts" %></th>
+      <th><%= sortable "pim" %></th>
+      <th><%= sortable "firstname" %></th>
+      <th><%= sortable "lastname" %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @goalies.each do |goaly| %>
-      <tr>
-        <td><%= goaly.playoffs %></td>
-        <td><%= goaly.year %></td>
-        <td><%= goaly.player %></td>
-        <td><%= goaly.age %></td>
-        <td><%= goaly.team %></td>
-        <td><%= goaly.gp %></td>
-        <td><%= goaly.w %></td>
-        <td><%= goaly.l %></td>
-        <td><%= goaly.ot %></td>
-        <td><%= goaly.ga %></td>
-        <td><%= goaly.sa %></td>
-        <td><%= goaly.sv %></td>
-        <td><%= goaly.svp %></td>
-        <td><%= goaly.gaa %></td>
-        <td><%= goaly.so %></td>
-        <td><%= goaly.minutes %></td>
-        <td><%= goaly.g %></td>
-        <td><%= goaly.a %></td>
-        <td><%= goaly.pts %></td>
-        <td><%= goaly.pim %></td>
-        <td><%= goaly.firstname %></td>
-        <td><%= goaly.lastname %></td>
-        <td><%= link_to 'Show', goaly %></td>
-        <td><%= link_to 'Edit', edit_goaly_path(goaly) %></td>
-        <td><%= link_to 'Destroy', goaly, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% @goalies.each do |goalie| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td><%= goalie.playoffs %></td>
+        <td><%= goalie.year %></td>
+        <td><%= goalie.player %></td>
+        <td><%= goalie.age %></td>
+        <td><%= goalie.team %></td>
+        <td><%= goalie.gp %></td>
+        <td><%= goalie.w %></td>
+        <td><%= goalie.l %></td>
+        <td><%= goalie.ot %></td>
+        <td><%= goalie.ga %></td>
+        <td><%= goalie.sa %></td>
+        <td><%= goalie.sv %></td>
+        <td><%= goalie.svp %></td>
+        <td><%= goalie.gaa %></td>
+        <td><%= goalie.so %></td>
+        <td><%= goalie.minutes %></td>
+        <td><%= goalie.g %></td>
+        <td><%= goalie.a %></td>
+        <td><%= goalie.pts %></td>
+        <td><%= goalie.pim %></td>
+        <td><%= goalie.firstname %></td>
+        <td><%= goalie.lastname %></td>
+        <td><%= link_to 'Show', goalie %></td>
+        <td><%= link_to 'Edit', edit_goaly_path(goalie) %></td>
+        <td><%= link_to 'Destroy', goalie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

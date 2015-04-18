@@ -1,10 +1,11 @@
 class GoaliesController < ApplicationController
   before_action :set_goalie, only: [:show, :edit, :update, :destroy]
+  helper_method :sort_column, :sort_direction
 
   # GET /goalies
   # GET /goalies.json
   def index
-    @goalies = Goalie.all
+    @goalies = Goalie.order(sort_column + " " + sort_direction)
   end
 
   # GET /goalies/1
@@ -70,5 +71,13 @@ class GoaliesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def goalie_params
       params.require(:goalie).permit(:playoffs, :year, :player, :age, :team, :gp, :w, :l, :ot, :ga, :sa, :sv, :svp, :gaa, :so, :minutes, :g, :a, :pts, :pim, :firstname, :lastname)
+    end
+
+    def sort_column
+      Goalie.column_names.include?(params[:sort]) ? params[:sort] : "year"
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"    
     end
 end

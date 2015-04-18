@@ -1,0 +1,32 @@
+// Place all the styles related to the Teams controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.teams {
+
+	table {
+		border-collapse: collapse;
+	}
+
+	table tr td {
+		padding: 5px;
+		vertical-align: top;
+		text-align: center;
+	}
+
+	table thead {
+		background: #a5bfd9;
+	}
+
+	table thead th {
+		padding-right: 20px;
+	}
+
+	.list_line_even {
+		background: #e0f8f8;
+	}
+
+	.list_line_odd {
+		background: #f8b0f8;
+	}
+}

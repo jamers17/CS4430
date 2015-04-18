@@ -1,44 +1,44 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Teams</h1>
+<h1>NHL/WHA Teams, 1963-2013</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Year</th>
-      <th>Teamname</th>
-      <th>Leagueid</th>
-      <th>Teamid</th>
-      <th>Rank</th>
-      <th>Playoff</th>
-      <th>Games</th>
-      <th>Wins</th>
-      <th>Losses</th>
-      <th>Ties</th>
-      <th>Overtimelosses</th>
-      <th>Points</th>
-      <th>Shootoutwins</th>
-      <th>Shootoutlosses</th>
-      <th>Goalsfor</th>
-      <th>Goalsagainst</th>
-      <th>Pim</th>
-      <th>Powerplaygoals</th>
-      <th>Powerplaychances</th>
-      <th>Shorthandedgoalsagainst</th>
-      <th>Powerplaygoalsagainst</th>
-      <th>Penaltykillchances</th>
-      <th>Shorthandedgoalsfor</th>
+      <th><%= sortable "year" %></th>
+      <th><%= sortable "teamName" %></th>
+      <th><%= sortable "teamID" %></th>
+      <th><%= sortable "leadueID" %></th>
+      <th><%= sortable "rank" %></th>
+      <th><%= sortable "playoff" %></th>
+      <th><%= sortable "games" %></th>
+      <th><%= sortable "wins" %></th>
+      <th><%= sortable "losses" %></th>
+      <th><%= sortable "ties" %></th>
+      <th><%= sortable "overTimeLosses" %></th>
+      <th><%= sortable "points" %></th>
+      <th><%= sortable "shootOutWins" %></th>
+      <th><%= sortable "shootOutLosses" %></th>
+      <th><%= sortable "goalsFor" %></th>
+      <th><%= sortable "goalsAgainst" %></th>
+      <th><%= sortable "pim" %></th>
+      <th><%= sortable "powerPlayGoals" %></th>
+      <th><%= sortable "powerPlayChances" %></th>
+      <th><%= sortable "shorthandedGoalsAgainst" %></th>
+      <th><%= sortable "powerPlayGoalsAgainst" %></th>
+      <th><%= sortable "penaltyKillChances" %></th>
+      <th><%= sortable "shorthandedGoalsFor" %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @teams.each do |team| %>
-      <tr>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td><%= team.year %></td>
         <td><%= team.teamName %></td>
-        <td><%= team.leagueID %></td>
         <td><%= team.teamID %></td>
+        <td><%= team.leagueID %></td>
         <td><%= team.rank %></td>
         <td><%= team.playoff %></td>
         <td><%= team.games %></td>
