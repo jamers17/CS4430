@@ -1,5 +1,5 @@
 class GoaliesController < ApplicationController
-  before_action :set_goaly, only: [:show, :edit, :update, :destroy]
+  before_action :set_goalie, only: [:show, :edit, :update, :destroy]
 
   # GET /goalies
   # GET /goalies.json
@@ -14,7 +14,7 @@ class GoaliesController < ApplicationController
 
   # GET /goalies/new
   def new
-    @goaly = Goalie.new
+    @goalie = Goalie.new
   end
 
   # GET /goalies/1/edit
@@ -24,15 +24,15 @@ class GoaliesController < ApplicationController
   # POST /goalies
   # POST /goalies.json
   def create
-    @goaly = Goalie.new(goaly_params)
+    @goalie = Goalie.new(goalie_params)
 
     respond_to do |format|
-      if @goaly.save
-        format.html { redirect_to @goaly, notice: 'Goalie was successfully created.' }
-        format.json { render :show, status: :created, location: @goaly }
+      if @goalie.save
+        format.html { redirect_to @goalie, notice: 'Goalie was successfully created.' }
+        format.json { render :show, status: :created, location: @goalie }
       else
         format.html { render :new }
-        format.json { render json: @goaly.errors, status: :unprocessable_entity }
+        format.json { render json: @goalie.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -41,12 +41,12 @@ class GoaliesController < ApplicationController
   # PATCH/PUT /goalies/1.json
   def update
     respond_to do |format|
-      if @goaly.update(goaly_params)
-        format.html { redirect_to @goaly, notice: 'Goalie was successfully updated.' }
-        format.json { render :show, status: :ok, location: @goaly }
+      if @goalie.update(goalie_params)
+        format.html { redirect_to @goalie, notice: 'Goalie was successfully updated.' }
+        format.json { render :show, status: :ok, location: @goalie }
       else
         format.html { render :edit }
-        format.json { render json: @goaly.errors, status: :unprocessable_entity }
+        format.json { render json: @goalie.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -54,7 +54,7 @@ class GoaliesController < ApplicationController
   # DELETE /goalies/1
   # DELETE /goalies/1.json
   def destroy
-    @goaly.destroy
+    @goalie.destroy
     respond_to do |format|
       format.html { redirect_to goalies_url, notice: 'Goalie was successfully destroyed.' }
       format.json { head :no_content }
@@ -63,12 +63,12 @@ class GoaliesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_goaly
-      @goaly = Goalie.find(params[:id])
+    def set_goalie
+      @goalie = Goalie.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def goaly_params
-      params.require(:goaly).permit(:playoffs, :year, :player, :age, :team, :gp, :w, :l, :ot, :ga, :sa, :sv, :svp, :gaa, :so, :minutes, :g, :a, :pts, :pim, :firstname, :lastname)
+    def goalie_params
+      params.require(:goalie).permit(:playoffs, :year, :player, :age, :team, :gp, :w, :l, :ot, :ga, :sa, :sv, :svp, :gaa, :so, :minutes, :g, :a, :pts, :pim, :firstname, :lastname)
     end
 end

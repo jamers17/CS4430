@@ -1,10 +1,10 @@
-<%= form_for(@goaly) do |f| %>
-  <% if @goaly.errors.any? %>
+<%= form_for(@goalie) do |f| %>
+  <% if @goalie.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@goaly.errors.count, "error") %> prohibited this goaly from being saved:</h2>
+      <h2><%= pluralize(@goalie.errors.count, "error") %> prohibited this goalie from being saved:</h2>
 
       <ul>
-      <% @goaly.errors.full_messages.each do |message| %>
+      <% @goalie.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
