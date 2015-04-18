@@ -1,0 +1,109 @@
+<%= form_for(@team) do |f| %>
+  <% if @team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+      <% @team.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.number_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :teamName %><br>
+    <%= f.text_field :teamName %>
+  </div>
+  <div class="field">
+    <%= f.label :leagueID %><br>
+    <%= f.text_field :leagueID %>
+  </div>
+  <div class="field">
+    <%= f.label :teamID %><br>
+    <%= f.text_field :teamID %>
+  </div>
+  <div class="field">
+    <%= f.label :rank %><br>
+    <%= f.number_field :rank %>
+  </div>
+  <div class="field">
+    <%= f.label :playoff %><br>
+    <%= f.text_field :playoff %>
+  </div>
+  <div class="field">
+    <%= f.label :games %><br>
+    <%= f.number_field :games %>
+  </div>
+  <div class="field">
+    <%= f.label :wins %><br>
+    <%= f.number_field :wins %>
+  </div>
+  <div class="field">
+    <%= f.label :loses %><br>
+    <%= f.number_field :loses %>
+  </div>
+  <div class="field">
+    <%= f.label :ties %><br>
+    <%= f.number_field :ties %>
+  </div>
+  <div class="field">
+    <%= f.label :overTimeLoses %><br>
+    <%= f.number_field :overTimeLoses %>
+  </div>
+  <div class="field">
+    <%= f.label :points %><br>
+    <%= f.number_field :points %>
+  </div>
+  <div class="field">
+    <%= f.label :shootOutWins %><br>
+    <%= f.number_field :shootOutWins %>
+  </div>
+  <div class="field">
+    <%= f.label :shootOutLoses %><br>
+    <%= f.number_field :shootOutLoses %>
+  </div>
+  <div class="field">
+    <%= f.label :goalsFor %><br>
+    <%= f.number_field :goalsFor %>
+  </div>
+  <div class="field">
+    <%= f.label :goalsAgainst %><br>
+    <%= f.number_field :goalsAgainst %>
+  </div>
+  <div class="field">
+    <%= f.label :pim %><br>
+    <%= f.number_field :pim %>
+  </div>
+  <div class="field">
+    <%= f.label :powerPlayGoals %><br>
+    <%= f.number_field :powerPlayGoals %>
+  </div>
+  <div class="field">
+    <%= f.label :powerPlayChances %><br>
+    <%= f.number_field :powerPlayChances %>
+  </div>
+  <div class="field">
+    <%= f.label :shorthandedGoalsAgainst %><br>
+    <%= f.number_field :shorthandedGoalsAgainst %>
+  </div>
+  <div class="field">
+    <%= f.label :powerPlayGoalsAgainst %><br>
+    <%= f.number_field :powerPlayGoalsAgainst %>
+  </div>
+  <div class="field">
+    <%= f.label :penaltyKillChances %><br>
+    <%= f.number_field :penaltyKillChances %>
+  </div>
+  <div class="field">
+    <%= f.label :shorthandedGoalsFor %><br>
+    <%= f.number_field :shorthandedGoalsFor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

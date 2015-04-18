@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: 1
+  teamName: MyString
+  leagueID: MyString
+  teamID: MyString
+  rank: 1
+  playoff: MyString
+  games: 1
+  wins: 1
+  loses: 1
+  ties: 1
+  overTimeLoses: 1
+  points: 1
+  shootOutWins: 1
+  shootOutLoses: 1
+  goalsFor: 1
+  goalsAgainst: 1
+  pim: 1
+  powerPlayGoals: 1
+  powerPlayChances: 1
+  shorthandedGoalsAgainst: 1
+  powerPlayGoalsAgainst: 1
+  penaltyKillChances: 1
+  shorthandedGoalsFor: 1
+
+two:
+  year: 1
+  teamName: MyString
+  leagueID: MyString
+  teamID: MyString
+  rank: 1
+  playoff: MyString
+  games: 1
+  wins: 1
+  loses: 1
+  ties: 1
+  overTimeLoses: 1
+  points: 1
+  shootOutWins: 1
+  shootOutLoses: 1
+  goalsFor: 1
+  goalsAgainst: 1
+  pim: 1
+  powerPlayGoals: 1
+  powerPlayChances: 1
+  shorthandedGoalsAgainst: 1
+  powerPlayGoalsAgainst: 1
+  penaltyKillChances: 1
+  shorthandedGoalsFor: 1

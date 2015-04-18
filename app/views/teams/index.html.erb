@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Teams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Teamname</th>
+      <th>Leagueid</th>
+      <th>Teamid</th>
+      <th>Rank</th>
+      <th>Playoff</th>
+      <th>Games</th>
+      <th>Wins</th>
+      <th>Loses</th>
+      <th>Ties</th>
+      <th>Overtimeloses</th>
+      <th>Points</th>
+      <th>Shootoutwins</th>
+      <th>Shootoutloses</th>
+      <th>Goalsfor</th>
+      <th>Goalsagainst</th>
+      <th>Pim</th>
+      <th>Powerplaygoals</th>
+      <th>Powerplaychances</th>
+      <th>Shorthandedgoalsagainst</th>
+      <th>Powerplaygoalsagainst</th>
+      <th>Penaltykillchances</th>
+      <th>Shorthandedgoalsfor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teams.each do |team| %>
+      <tr>
+        <td><%= team.year %></td>
+        <td><%= team.teamName %></td>
+        <td><%= team.leagueID %></td>
+        <td><%= team.teamID %></td>
+        <td><%= team.rank %></td>
+        <td><%= team.playoff %></td>
+        <td><%= team.games %></td>
+        <td><%= team.wins %></td>
+        <td><%= team.loses %></td>
+        <td><%= team.ties %></td>
+        <td><%= team.overTimeLoses %></td>
+        <td><%= team.points %></td>
+        <td><%= team.shootOutWins %></td>
+        <td><%= team.shootOutLoses %></td>
+        <td><%= team.goalsFor %></td>
+        <td><%= team.goalsAgainst %></td>
+        <td><%= team.pim %></td>
+        <td><%= team.powerPlayGoals %></td>
+        <td><%= team.powerPlayChances %></td>
+        <td><%= team.shorthandedGoalsAgainst %></td>
+        <td><%= team.powerPlayGoalsAgainst %></td>
+        <td><%= team.penaltyKillChances %></td>
+        <td><%= team.shorthandedGoalsFor %></td>
+        <td><%= link_to 'Show', team %></td>
+        <td><%= link_to 'Edit', edit_team_path(team) %></td>
+        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Team', new_team_path %>

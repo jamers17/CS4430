@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150418011216) do
+ActiveRecord::Schema.define(version: 20150418022127) do
 
   create_table "goalies", force: :cascade do |t|
     t.boolean  "playoffs",   limit: 1
@@ -38,6 +38,34 @@ ActiveRecord::Schema.define(version: 20150418011216) do
     t.string   "lastname",   limit: 255
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.integer  "year",                    limit: 4
+    t.string   "teamName",                limit: 255
+    t.string   "leagueID",                limit: 255
+    t.string   "teamID",                  limit: 255
+    t.integer  "rank",                    limit: 4
+    t.string   "playoff",                 limit: 255
+    t.integer  "games",                   limit: 4
+    t.integer  "wins",                    limit: 4
+    t.integer  "loses",                   limit: 4
+    t.integer  "ties",                    limit: 4
+    t.integer  "overTimeLoses",           limit: 4
+    t.integer  "points",                  limit: 4
+    t.integer  "shootOutWins",            limit: 4
+    t.integer  "shootOutLoses",           limit: 4
+    t.integer  "goalsFor",                limit: 4
+    t.integer  "goalsAgainst",            limit: 4
+    t.integer  "pim",                     limit: 4
+    t.integer  "powerPlayGoals",          limit: 4
+    t.integer  "powerPlayChances",        limit: 4
+    t.integer  "shorthandedGoalsAgainst", limit: 4
+    t.integer  "powerPlayGoalsAgainst",   limit: 4
+    t.integer  "penaltyKillChances",      limit: 4
+    t.integer  "shorthandedGoalsFor",     limit: 4
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
 end
