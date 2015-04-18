@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150418022127) do
+ActiveRecord::Schema.define(version: 20150418023254) do
 
   create_table "goalies", force: :cascade do |t|
     t.boolean  "playoffs",   limit: 1
@@ -49,12 +49,12 @@ ActiveRecord::Schema.define(version: 20150418022127) do
     t.string   "playoff",                 limit: 255
     t.integer  "games",                   limit: 4
     t.integer  "wins",                    limit: 4
-    t.integer  "loses",                   limit: 4
+    t.integer  "losses",                  limit: 4
     t.integer  "ties",                    limit: 4
-    t.integer  "overTimeLoses",           limit: 4
+    t.integer  "overTimeLosses",          limit: 4
     t.integer  "points",                  limit: 4
     t.integer  "shootOutWins",            limit: 4
-    t.integer  "shootOutLoses",           limit: 4
+    t.integer  "shootOutLosses",          limit: 4
     t.integer  "goalsFor",                limit: 4
     t.integer  "goalsAgainst",            limit: 4
     t.integer  "pim",                     limit: 4
