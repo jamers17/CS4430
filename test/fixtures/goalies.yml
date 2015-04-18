@@ -5,6 +5,7 @@ one:
   year: 1
   player: MyString
   age: 1
+  team: MyString
   gp: 1
   w: 1
   l: 1
@@ -28,6 +29,7 @@ two:
   year: 1
   player: MyString
   age: 1
+  team: MyString
   gp: 1
   w: 1
   l: 1

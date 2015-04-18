@@ -5,6 +5,7 @@ class CreateGoalies < ActiveRecord::Migration
       t.integer :year
       t.string :player
       t.integer :age
+      t.string :team
       t.integer :gp
       t.integer :w
       t.integer :l
@@ -12,8 +13,8 @@ class CreateGoalies < ActiveRecord::Migration
       t.integer :ga
       t.integer :sa
       t.integer :sv
-      t.decimal :svp, precision: 8, scale: 3
-      t.decimal :gaa, precision: 8, scale: 2
+      t.decimal :svp
+      t.decimal :gaa
       t.integer :so
       t.integer :minutes
       t.integer :g

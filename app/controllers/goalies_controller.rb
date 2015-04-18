@@ -69,6 +69,6 @@ class GoaliesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def goaly_params
-      params.require(:goaly).permit(:playoffs, :year, :player, :age, :gp, :w, :l, :ot, :ga, :sa, :sv, :svp, :gaa, :so, :minutes, :g, :a, :pts, :pim, :firstname, :lastname)
+      params.require(:goaly).permit(:playoffs, :year, :player, :age, :team, :gp, :w, :l, :ot, :ga, :sa, :sv, :svp, :gaa, :so, :minutes, :g, :a, :pts, :pim, :firstname, :lastname)
     end
 end
