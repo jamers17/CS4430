@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150418023254) do
+ActiveRecord::Schema.define(version: 20150418160814) do
 
   create_table "goalies", force: :cascade do |t|
     t.boolean  "playoffs",   limit: 1

@@ -18,7 +18,7 @@ class TeamsControllerTest < ActionController::TestCase
 
   test "should create team" do
     assert_difference('Team.count') do
-      post :create, team: { games: @team.games, goalsAgainst: @team.goalsAgainst, goalsFor: @team.goalsFor, leagueID: @team.leagueID, loses: @team.loses, overTimeLoses: @team.overTimeLoses, penaltyKillChances: @team.penaltyKillChances, pim: @team.pim, playoff: @team.playoff, points: @team.points, powerPlayChances: @team.powerPlayChances, powerPlayGoals: @team.powerPlayGoals, powerPlayGoalsAgainst: @team.powerPlayGoalsAgainst, rank: @team.rank, shootOutLoses: @team.shootOutLoses, shootOutWins: @team.shootOutWins, shorthandedGoalsAgainst: @team.shorthandedGoalsAgainst, shorthandedGoalsFor: @team.shorthandedGoalsFor, teamID: @team.teamID, teamName: @team.teamName, ties: @team.ties, wins: @team.wins, year: @team.year }
+      post :create, team: { games: @team.games, goalsAgainst: @team.goalsAgainst, goalsFor: @team.goalsFor, leagueID: @team.leagueID, losses: @team.losses, overTimeLosses: @team.overTimeLosses, penaltyKillChances: @team.penaltyKillChances, pim: @team.pim, playoff: @team.playoff, points: @team.points, powerPlayChances: @team.powerPlayChances, powerPlayGoals: @team.powerPlayGoals, powerPlayGoalsAgainst: @team.powerPlayGoalsAgainst, rank: @team.rank, shootOutLosses: @team.shootOutLosses, shootOutWins: @team.shootOutWins, shortHandedGoalsFor: @team.shortHandedGoalsFor, shorthandedGoalsAgainst: @team.shorthandedGoalsAgainst, teamID: @team.teamID, teamName: @team.teamName, ties: @team.ties, wins: @team.wins, year: @team.year }
     end
 
     assert_redirected_to team_path(assigns(:team))
@@ -35,7 +35,7 @@ class TeamsControllerTest < ActionController::TestCase
   end
 
   test "should update team" do
-    patch :update, id: @team, team: { games: @team.games, goalsAgainst: @team.goalsAgainst, goalsFor: @team.goalsFor, leagueID: @team.leagueID, loses: @team.loses, overTimeLoses: @team.overTimeLoses, penaltyKillChances: @team.penaltyKillChances, pim: @team.pim, playoff: @team.playoff, points: @team.points, powerPlayChances: @team.powerPlayChances, powerPlayGoals: @team.powerPlayGoals, powerPlayGoalsAgainst: @team.powerPlayGoalsAgainst, rank: @team.rank, shootOutLoses: @team.shootOutLoses, shootOutWins: @team.shootOutWins, shorthandedGoalsAgainst: @team.shorthandedGoalsAgainst, shorthandedGoalsFor: @team.shorthandedGoalsFor, teamID: @team.teamID, teamName: @team.teamName, ties: @team.ties, wins: @team.wins, year: @team.year }
+    patch :update, id: @team, team: { games: @team.games, goalsAgainst: @team.goalsAgainst, goalsFor: @team.goalsFor, leagueID: @team.leagueID, losses: @team.losses, overTimeLosses: @team.overTimeLosses, penaltyKillChances: @team.penaltyKillChances, pim: @team.pim, playoff: @team.playoff, points: @team.points, powerPlayChances: @team.powerPlayChances, powerPlayGoals: @team.powerPlayGoals, powerPlayGoalsAgainst: @team.powerPlayGoalsAgainst, rank: @team.rank, shootOutLosses: @team.shootOutLosses, shootOutWins: @team.shootOutWins, shortHandedGoalsFor: @team.shortHandedGoalsFor, shorthandedGoalsAgainst: @team.shorthandedGoalsAgainst, teamID: @team.teamID, teamName: @team.teamName, ties: @team.ties, wins: @team.wins, year: @team.year }
     assert_redirected_to team_path(assigns(:team))
   end
 

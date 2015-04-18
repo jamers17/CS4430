@@ -9,12 +9,12 @@ one:
   playoff: MyString
   games: 1
   wins: 1
-  loses: 1
+  losses: 1
   ties: 1
-  overTimeLoses: 1
+  overTimeLosses: 1
   points: 1
   shootOutWins: 1
-  shootOutLoses: 1
+  shootOutLosses: 1
   goalsFor: 1
   goalsAgainst: 1
   pim: 1
@@ -23,7 +23,7 @@ one:
   shorthandedGoalsAgainst: 1
   powerPlayGoalsAgainst: 1
   penaltyKillChances: 1
-  shorthandedGoalsFor: 1
+  shortHandedGoalsFor: 1
 
 two:
   year: 1
@@ -34,12 +34,12 @@ two:
   playoff: MyString
   games: 1
   wins: 1
-  loses: 1
+  losses: 1
   ties: 1
-  overTimeLoses: 1
+  overTimeLosses: 1
   points: 1
   shootOutWins: 1
-  shootOutLoses: 1
+  shootOutLosses: 1
   goalsFor: 1
   goalsAgainst: 1
   pim: 1
@@ -48,4 +48,4 @@ two:
   shorthandedGoalsAgainst: 1
   powerPlayGoalsAgainst: 1
   penaltyKillChances: 1
-  shorthandedGoalsFor: 1
+  shortHandedGoalsFor: 1

@@ -9,12 +9,12 @@ class CreateTeams < ActiveRecord::Migration
       t.string :playoff
       t.integer :games
       t.integer :wins
-      t.integer :loses
+      t.integer :losses
       t.integer :ties
-      t.integer :overTimeLoses
+      t.integer :overTimeLosses
       t.integer :points
       t.integer :shootOutWins
-      t.integer :shootOutLoses
+      t.integer :shootOutLosses
       t.integer :goalsFor
       t.integer :goalsAgainst
       t.integer :pim
@@ -23,7 +23,7 @@ class CreateTeams < ActiveRecord::Migration
       t.integer :shorthandedGoalsAgainst
       t.integer :powerPlayGoalsAgainst
       t.integer :penaltyKillChances
-      t.integer :shorthandedGoalsFor
+      t.integer :shortHandedGoalsFor
 
       t.timestamps null: false
     end
