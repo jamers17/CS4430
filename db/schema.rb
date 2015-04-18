@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417045348) do
+ActiveRecord::Schema.define(version: 20150418004637) do
 
-  create_table "goalies", id: false, force: :cascade do |t|
+  create_table "goalies", force: :cascade do |t|
     t.boolean  "playoffs",   limit: 1
-    t.date     "year"
-    t.text     "player",     limit: 65535
+    t.integer  "year",       limit: 4
+    t.string   "player",     limit: 255
     t.integer  "age",        limit: 4
     t.integer  "gp",         limit: 4
     t.integer  "w",          limit: 4
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20150417045348) do
     t.integer  "ga",         limit: 4
     t.integer  "sa",         limit: 4
     t.integer  "sv",         limit: 4
-    t.decimal  "svp",                      precision: 8, scale: 3
-    t.decimal  "gaa",                      precision: 8, scale: 2
+    t.decimal  "svp",                    precision: 8, scale: 3
+    t.decimal  "gaa",                    precision: 8, scale: 2
     t.integer  "so",         limit: 4
     t.integer  "minutes",    limit: 4
     t.integer  "g",          limit: 4
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 20150417045348) do
     t.integer  "pim",        limit: 4
     t.string   "firstname",  limit: 255
     t.string   "lastname",   limit: 255
-    t.datetime "created_at",                                       null: false
-    t.datetime "updated_at",                                       null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
   end
 
 end

@@ -2,8 +2,8 @@
 
 one:
   playoffs: false
-  year: 2015-04-16
-  player: MyText
+  year: 1
+  player: MyString
   age: 1
   gp: 1
   w: 1
@@ -12,7 +12,7 @@ one:
   ga: 1
   sa: 1
   sv: 1
-  sv%: 9.99
+  svp: 9.99
   gaa: 9.99
   so: 1
   minutes: 1
@@ -25,8 +25,8 @@ one:
 
 two:
   playoffs: false
-  year: 2015-04-16
-  player: MyText
+  year: 1
+  player: MyString
   age: 1
   gp: 1
   w: 1
@@ -35,7 +35,7 @@ two:
   ga: 1
   sa: 1
   sv: 1
-  sv%: 9.99
+  svp: 9.99
   gaa: 9.99
   so: 1
   minutes: 1

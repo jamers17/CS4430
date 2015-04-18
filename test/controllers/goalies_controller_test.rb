@@ -18,7 +18,7 @@ class GoaliesControllerTest < ActionController::TestCase
 
   test "should create goaly" do
     assert_difference('Goalie.count') do
-      post :create, goaly: { a: @goaly.a, age: @goaly.age, firstname: @goaly.firstname, g: @goaly.g, ga: @goaly.ga, gaa: @goaly.gaa, gp: @goaly.gp, l: @goaly.l, lastname: @goaly.lastname, minutes: @goaly.minutes, ot: @goaly.ot, pim: @goaly.pim, player: @goaly.player, playoffs: @goaly.playoffs, pts: @goaly.pts, sa: @goaly.sa, so: @goaly.so, sv%: @goaly.sv%, sv: @goaly.sv, w: @goaly.w, year: @goaly.year }
+      post :create, goaly: { a: @goaly.a, age: @goaly.age, firstname: @goaly.firstname, g: @goaly.g, ga: @goaly.ga, gaa: @goaly.gaa, gp: @goaly.gp, l: @goaly.l, lastname: @goaly.lastname, minutes: @goaly.minutes, ot: @goaly.ot, pim: @goaly.pim, player: @goaly.player, playoffs: @goaly.playoffs, pts: @goaly.pts, sa: @goaly.sa, so: @goaly.so, sv: @goaly.sv, svp: @goaly.svp, w: @goaly.w, year: @goaly.year }
     end
 
     assert_redirected_to goaly_path(assigns(:goaly))
@@ -35,7 +35,7 @@ class GoaliesControllerTest < ActionController::TestCase
   end
 
   test "should update goaly" do
-    patch :update, id: @goaly, goaly: { a: @goaly.a, age: @goaly.age, firstname: @goaly.firstname, g: @goaly.g, ga: @goaly.ga, gaa: @goaly.gaa, gp: @goaly.gp, l: @goaly.l, lastname: @goaly.lastname, minutes: @goaly.minutes, ot: @goaly.ot, pim: @goaly.pim, player: @goaly.player, playoffs: @goaly.playoffs, pts: @goaly.pts, sa: @goaly.sa, so: @goaly.so, sv%: @goaly.sv%, sv: @goaly.sv, w: @goaly.w, year: @goaly.year }
+    patch :update, id: @goaly, goaly: { a: @goaly.a, age: @goaly.age, firstname: @goaly.firstname, g: @goaly.g, ga: @goaly.ga, gaa: @goaly.gaa, gp: @goaly.gp, l: @goaly.l, lastname: @goaly.lastname, minutes: @goaly.minutes, ot: @goaly.ot, pim: @goaly.pim, player: @goaly.player, playoffs: @goaly.playoffs, pts: @goaly.pts, sa: @goaly.sa, so: @goaly.so, sv: @goaly.sv, svp: @goaly.svp, w: @goaly.w, year: @goaly.year }
     assert_redirected_to goaly_path(assigns(:goaly))
   end
 

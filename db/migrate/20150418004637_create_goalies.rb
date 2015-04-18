@@ -2,8 +2,8 @@ class CreateGoalies < ActiveRecord::Migration
   def change
     create_table :goalies do |t|
       t.boolean :playoffs
-      t.date :year
-      t.text :player
+      t.integer :year
+      t.string :player
       t.integer :age
       t.integer :gp
       t.integer :w
