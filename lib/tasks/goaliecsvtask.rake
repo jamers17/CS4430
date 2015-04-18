@@ -39,7 +39,7 @@ namespace :goaliecsvtask do
 
   		require 'csv'
 
-  		CSV.foreach('/tmp/teams.csv', :headers => true) do |row|
+  		CSV.foreach('tmp/teams.csv', :headers => true) do |row|
   		team = Team.new ({
   		year: 						row[0],
   		teamName:       			row[1],
