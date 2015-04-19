@@ -13,14 +13,15 @@
  *= require_tree .
  *= require_self
  */
-
 #banner {
   padding: 10px;
-  font: bold 30px/30px serif;
+  font: bold 30px/30px sans-serif;
   color: #fff;
   text-align: center;
   background: #222930;
   margin: 5px 0px 5px 0px;
+  border-radius: 5px;
+
 
   #menu {
     text-align: left;
@@ -31,6 +32,7 @@
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+
   }
   #menu a, a:visited {
     color: #333;
@@ -51,6 +53,7 @@
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
+    border-radius: 5px;
   }
   #menu li a, a:visited {
     color: #333;
@@ -74,11 +77,12 @@
 }
 
 #main {
+  font-family: Arial, Verdana, sans-serif;
   background: #8d9c99;
   color: #fff;
   padding: 10px 0px 0px 0px;
   text-align: center;
-  height: 550px;
+  height: 1000px;
   overflow-y: auto; 
 
   a, a:visited {
@@ -93,8 +97,8 @@
   text-align: center;
   background: #222930;
   margin: 10px 0px 0px 0px;
-  height: 150px;
-
+  height: 75px;
+  border-radius: 5px;
 }
 
 table {
