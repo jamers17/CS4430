@@ -5,6 +5,7 @@ class TeamsController < ApplicationController
   # GET /teams
   # GET /teams.json
   def index
+    @team = Team.first
     @teams = Team.order(sort_column + " " + sort_direction)
   end
 
