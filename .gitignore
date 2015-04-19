@@ -16,5 +16,8 @@
 /log/*
 !/log/.keep
 /tmp
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9cad29db5b2a3feb2135834d5035d7acd95a9bfa
 /db/migrate
