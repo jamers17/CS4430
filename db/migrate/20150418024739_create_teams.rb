@@ -23,7 +23,7 @@ class CreateTeams < ActiveRecord::Migration
       t.integer :shorthandedGoalsAgainst
       t.integer :powerPlayGoalsAgainst
       t.integer :penaltyKillChances
-      t.integer :shortHandedGoalsFor
+      t.integer :shorthandedGoalsFor
 
       t.timestamps null: false
     end
