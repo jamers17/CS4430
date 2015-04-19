@@ -68,5 +68,8 @@
 <%= link_to 'New Goalie', new_goaly_path %>
 
 <% content_for :query do %>
-  <h1>GOALIES</h1>
+  <%= form_for @goalie do |f| %>
+         <%= f.select :player, options_for_select(Goalie.uniq.pluck(:player)) %>
+        <%= f.submit "Search" %>
+        <% end %>
 <% end %>

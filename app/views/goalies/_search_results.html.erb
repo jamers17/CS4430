@@ -1,0 +1,7 @@
+<ul>
+  <% @goalies.each do |goalies| %>
+  <li>
+    <%= link_to goalies.title, :action => 'show', :id => goalies.id %>
+  </li>
+      <% end %>
+</ul>

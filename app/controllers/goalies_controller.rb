@@ -6,6 +6,7 @@ class GoaliesController < ApplicationController
   # GET /goalies.json
   def index
     @goalies = Goalie.order(sort_column + " " + sort_direction)
+    @goalie = Goalie.first
   end
 
   # GET /goalies/1
