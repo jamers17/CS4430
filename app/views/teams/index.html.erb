@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>NHL/WHA Teams, 1963-2013</h1>
 
-<table>
+<h2>Teams, 1963-2013</h2>
+<table class="body_scroll">
   <thead>
     <tr>
       <th><%= sortable "year" %></th>
@@ -31,7 +31,6 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @teams.each do |team| %>
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">

@@ -16,6 +16,7 @@
 
 	table thead {
 		background: #a5bfd9;
+		border-bottom: 1px solid;
 	}
 
 	table thead th {
@@ -23,10 +24,12 @@
 	}
 
 	.list_line_even {
-		background: #e0f8f8;
+		color: #000000;
+		background: #bbeeff;
 	}
 
 	.list_line_odd {
-		background: #f8b0f8;
+		color: #000000;
+		background: #eebbff;
 	}
 }
