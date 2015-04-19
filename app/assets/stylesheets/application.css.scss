@@ -78,9 +78,9 @@
   color: #fff;
   padding: 10px 0px 0px 0px;
   text-align: center;
-  height: 570px;
-  overflow: auto;
- 
+  height: 550px;
+  overflow-y: auto; 
+
   a, a:visited {
     color: #0f0f83;
   }
@@ -92,7 +92,9 @@
   color: #fff;
   text-align: center;
   background: #222930;
-  margin: 0px 5px 0px 5px;
+  margin: 10px 0px 0px 0px;
+  height: 150px;
+
 }
 
 table {
@@ -106,7 +108,8 @@ table tr td {
 }
 
 table thead th {
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .list_line_even {
