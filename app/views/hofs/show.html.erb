@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hof.name %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @hof.year %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @hof.category %>
+</p>
+
+<%= link_to 'Edit', edit_hof_path(@hof) %> |
+<%= link_to 'Back', hofs_path %>
