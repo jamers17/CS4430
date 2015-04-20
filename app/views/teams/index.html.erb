@@ -1,7 +1,40 @@
 <p id="notice"><%= notice %></p>
 
+<% content_for :query do %>
 
-<table class="body_scroll">
+  <h1>Teams, 1963-2013</h1>
+
+
+  <%= search_form_for @search do |f| %>
+    <div class="field">
+      <%= f.label :year_gteq, "Years From, To" %><br />
+      <%= f.search_field :year_gteq %>
+      <%= f.search_field :year_lteq %>
+    </div>
+    <div class="field">
+      <%= f.label :teamName_cont, "Team" %><br />
+      <%= f.search_field :teamName_cont %>
+    </div>
+    <div class="field">
+      <%= f.label :leagueID_cont, "League" %><br />
+      <%= f.search_field :leagueID_cont %>
+    </div>
+    <div class="field">
+      <%= f.label :rank_eq, "Division Rank" %><br />
+      <%= f.search_field :rank_eq %>
+    </div>
+    <div class="field">
+      <%= f.label :playoff_eq, "Playoff Result" %><br />
+      <%= f.search_field :playoff_eq %>
+    </div>
+    <br />
+    <br />
+    <div class="actions"><%= f.submit "Search", :class => "button" %></div>
+  <% end %>
+
+<% end %>
+
+<table>
   <thead>
     <tr>
       <th><%= sort_link @search, :year, "Year" %></th>
@@ -27,7 +60,6 @@
       <th><%= sort_link @search, :powerPlayGoalsAgainst, "Powerplay Goals Against" %></th>
       <th><%= sort_link @search, :penaltyKillChances, "Penalty Kill Chances" %></th>
       <th><%= sort_link @search, :shorthandedGoalsFor, "Shorthanded Goals For" %></th>
-      <th colspan="3"></th>
     </tr>
   </thead>
   <tbody>
@@ -56,35 +88,9 @@
         <td><%= team.powerPlayGoalsAgainst %></td>
         <td><%= team.penaltyKillChances %></td>
         <td><%= team.shorthandedGoalsFor %></td>
-        <!-- <td><%= link_to 'Show', team %></td>
-        <td><%= link_to 'Edit', edit_team_path(team) %></td>
-        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<!-- <br>
-
-<%= link_to 'New Team', new_team_path %> -->
-
-<% content_for :query do %>
-  
-  <h1>Teams, 1963-2013</h1>
-
-  <%= search_form_for @search do |f| %>
-    <div class="field">
-      <%= f.label :year_gteq, "Years from: " %>
-      <%= f.text_field :year_gteq %>
-      <%= f.label :year_lteq, "to: " %>
-      <%= f.text_field :year_lteq %>
-    </div>
-    <div class="field">
-      <%= f.label :teamName_cont, "Team Name: " %>
-      <%= f.text_field :teamName_cont %>
-    </div>
-    <div class="actions"><%= f.submit "Search" %></div>
-  <% end %>
-
-<% end %>
 

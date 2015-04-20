@@ -17,8 +17,12 @@
 </div>
 
 <div id="main">
-	<%= yield :query %>
-	<%= yield %>
+	<div id="query">
+		<%= yield :query %>
+	</div>
+	<div id="db">
+		<%= yield %>
+	</div>
 </div>
 
 
