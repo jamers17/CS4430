@@ -5,8 +5,8 @@ class TeamsController < ApplicationController
   # GET /teams
   # GET /teams.json
   def index
-    @team = Team.first
-    @teams = Team.order(sort_column + " " + sort_direction)
+    @search = Team.search(params[:q])
+    @teams = @search.result
   end
 
   # GET /teams/1
@@ -72,13 +72,5 @@ class TeamsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_params
       params.require(:team).permit(:year, :teamName, :leagueID, :teamID, :rank, :playoff, :games, :wins, :losses, :ties, :overTimeLosses, :points, :shootOutWins, :shootOutLosses, :goalsFor, :goalsAgainst, :pim, :powerPlayGoals, :powerPlayChances, :shorthandedGoalsAgainst, :powerPlayGoalsAgainst, :penaltyKillChances, :shortHandedGoalsFor)
-    end
-
-    def sort_column
-      Team.column_names.include?(params[:sort]) ? params[:sort] : "year"
-    end
-
-    def sort_direction
-      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"    
     end
 end

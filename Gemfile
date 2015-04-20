@@ -28,6 +28,8 @@ gem 'roo'
 gem 'roo-xls'
 gem 'roo-google'
 
+gem 'ransack'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

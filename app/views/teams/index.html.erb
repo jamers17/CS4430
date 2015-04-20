@@ -1,33 +1,32 @@
 <p id="notice"><%= notice %></p>
 
 
-<h2>Teams, 1963-2013</h2>
 <table class="body_scroll">
   <thead>
     <tr>
-      <th><%= sortable "year" %></th>
-      <th><%= sortable "teamName" %></th>
-      <th><%= sortable "teamID" %></th>
-      <th><%= sortable "leagueID" %></th>
-      <th><%= sortable "rank" %></th>
-      <th><%= sortable "playoff" %></th>
-      <th><%= sortable "games" %></th>
-      <th><%= sortable "wins" %></th>
-      <th><%= sortable "losses" %></th>
-      <th><%= sortable "ties" %></th>
-      <th><%= sortable "overTimeLosses" %></th>
-      <th><%= sortable "points" %></th>
-      <th><%= sortable "shootOutWins" %></th>
-      <th><%= sortable "shootOutLosses" %></th>
-      <th><%= sortable "goalsFor" %></th>
-      <th><%= sortable "goalsAgainst" %></th>
-      <th><%= sortable "pim" %></th>
-      <th><%= sortable "powerPlayGoals" %></th>
-      <th><%= sortable "powerPlayChances" %></th>
-      <th><%= sortable "shorthandedGoalsAgainst" %></th>
-      <th><%= sortable "powerPlayGoalsAgainst" %></th>
-      <th><%= sortable "penaltyKillChances" %></th>
-      <th><%= sortable "shorthandedGoalsFor" %></th>
+      <th><%= sort_link @search, :year, "Year" %></th>
+      <th><%= sort_link @search, :teamName, "Team Name" %></th>
+      <th><%= sort_link @search, :teamID, "Team ID" %></th>
+      <th><%= sort_link @search, :leagueID, "League" %></th>
+      <th><%= sort_link @search, :rank, "Division Rank" %></th>
+      <th><%= sort_link @search, :playoff, "Playoff Result" %></th>
+      <th><%= sort_link @search, :games, "Games" %></th>
+      <th><%= sort_link @search, :wins, "Wins" %></th>
+      <th><%= sort_link @search, :losses, "Losses" %></th>
+      <th><%= sort_link @search, :ties, "Ties" %></th>
+      <th><%= sort_link @search, :overTimeLosses, "Overtime Losses" %></th>
+      <th><%= sort_link @search, :points, "Points" %></th>
+      <th><%= sort_link @search, :shootOutWins, "Shootout Wins" %></th>
+      <th><%= sort_link @search, :shootOutLosses, "Shootout Losses" %></th>
+      <th><%= sort_link @search, :goalsFor, "Goals For" %></th>
+      <th><%= sort_link @search, :goalsAgainst, "Goals Against" %></th>
+      <th><%= sort_link @search, :pim, "Penalty Minutes" %></th>
+      <th><%= sort_link @search, :powerPlayGoals, "Powerplay Goals" %></th>
+      <th><%= sort_link @search, :powerPlayChances, "Powerplay Chances" %></th>
+      <th><%= sort_link @search, :shorthandedGoalsAgainst, "Shorthanded Goals Against" %></th>
+      <th><%= sort_link @search, :powerPlayGoalsAgainst, "Powerplay Goals Against" %></th>
+      <th><%= sort_link @search, :penaltyKillChances, "Penalty Kill Chances" %></th>
+      <th><%= sort_link @search, :shorthandedGoalsFor, "Shorthanded Goals For" %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -57,26 +56,35 @@
         <td><%= team.powerPlayGoalsAgainst %></td>
         <td><%= team.penaltyKillChances %></td>
         <td><%= team.shorthandedGoalsFor %></td>
-        <td><%= link_to 'Show', team %></td>
+        <!-- <td><%= link_to 'Show', team %></td>
         <td><%= link_to 'Edit', edit_team_path(team) %></td>
-        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
+<!-- <br>
 
-<%= link_to 'New Team', new_team_path %>
+<%= link_to 'New Team', new_team_path %> -->
 
 <% content_for :query do %>
-  <%= form_for @team do |f| %>
+  
+  <h1>Teams, 1963-2013</h1>
 
-      <%= f.label :year %><br>
-      <%= f.select :year, options_for_select(Team.uniq.pluck(:year)) %>
-
-      <br>
-      <%= f.submit "Search" %>
+  <%= search_form_for @search do |f| %>
+    <div class="field">
+      <%= f.label :year_gteq, "Years from: " %>
+      <%= f.text_field :year_gteq %>
+      <%= f.label :year_lteq, "to: " %>
+      <%= f.text_field :year_lteq %>
+    </div>
+    <div class="field">
+      <%= f.label :teamName_cont, "Team Name: " %>
+      <%= f.text_field :teamName_cont %>
+    </div>
+    <div class="actions"><%= f.submit "Search" %></div>
   <% end %>
+
 <% end %>
 
