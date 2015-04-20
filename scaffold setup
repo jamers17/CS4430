@@ -1,0 +1,9 @@
+rails generate scaffold Hof name:string year:integer category:string
+
+rails generate scaffold Abbreviations type:string abbreviation:string fullName:string
+
+rails generate scaffold Miscawards name:string award:string year:integer league:string note:string
+
+rails generate scaffold Teamvsteam year:integer league:string team:string opposingTeam:string wins:integer losses:integer ties:integer otl:integer
+
+rails generate scaffold Seriespost year:integer round:string series:string winnerTeam:string winnerTeamLeague:string loserTeam:string loserTeamLeague:string wins:integer losses:integer ties:integer winnersGoals:integer losersGoals:integer
