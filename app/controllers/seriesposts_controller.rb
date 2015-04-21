@@ -4,7 +4,12 @@ class SeriespostsController < ApplicationController
   # GET /seriesposts
   # GET /seriesposts.json
   def index
+<<<<<<< HEAD
     @seriesposts = Seriespost.all
+=======
+    @search = Seriespost.search(params[:q])
+    @seriesposts = @search.result
+>>>>>>> 00cd9560e4eb71a15c329eb8f5889a9ce2f9eeb6
   end
 
   # GET /seriesposts/1

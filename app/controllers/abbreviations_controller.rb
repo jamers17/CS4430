@@ -4,7 +4,12 @@ class AbbreviationsController < ApplicationController
   # GET /abbreviations
   # GET /abbreviations.json
   def index
+<<<<<<< HEAD
     @abbreviations = Abbreviation.all
+=======
+    @search = Abbreviation.search(params[:q])
+    @teams = @search.result
+>>>>>>> 00cd9560e4eb71a15c329eb8f5889a9ce2f9eeb6
   end
 
   # GET /abbreviations/1

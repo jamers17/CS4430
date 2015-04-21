@@ -4,7 +4,12 @@ class MiscawardsController < ApplicationController
   # GET /miscawards
   # GET /miscawards.json
   def index
+<<<<<<< HEAD
     @miscawards = Miscaward.all
+=======
+    @search = Miscaward.search(params[:q])
+    @miscawards = @search.result
+>>>>>>> 00cd9560e4eb71a15c329eb8f5889a9ce2f9eeb6
   end
 
   # GET /miscawards/1

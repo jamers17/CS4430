@@ -83,6 +83,7 @@ namespace :goaliecsvtask do
     end
 
     task :abbreviationstask => :environment do
+<<<<<<< HEAD
       require 'csv'
 
       CSV.foreach('/tmp/abbrev.csv', :headers => true) do |row|
@@ -107,6 +108,32 @@ namespace :goaliecsvtask do
           note: row[4]
         })
         miscawards.save!
+=======
+        require 'csv'
+
+        CSV.foreach('tmp/abbrev.csv', :headers => true) do |row|
+          abbreviation = Abbreviation.new ({
+                                                category: row[0],
+                                                abrv: row[1],
+                                                fullName: row[2]
+                                            })
+          abbreviation.save!
+        end
+    end
+
+    task :miscawardstask => :environment do
+        require 'csv'
+
+       CSV.foreach('tmp/AwardsMisc.csv', :headers => true) do |row|
+        miscaward = Miscaward.new ({
+                                        name: row[0],
+                                        award: row[1],
+                                        year: row[2],
+                                        league: row[3],
+                                        note: row[4]
+                                    })
+        miscaward.save!
+>>>>>>> 00cd9560e4eb71a15c329eb8f5889a9ce2f9eeb6
       end
     end
 

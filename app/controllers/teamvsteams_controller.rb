@@ -4,7 +4,12 @@ class TeamvsteamsController < ApplicationController
   # GET /teamvsteams
   # GET /teamvsteams.json
   def index
+<<<<<<< HEAD
     @teamvsteams = Teamvsteam.all
+=======
+    @search = Teamvsteam.search(params[:q])
+    @teamvsteams = @search.result
+>>>>>>> 00cd9560e4eb71a15c329eb8f5889a9ce2f9eeb6
   end
 
   # GET /teamvsteams/1
