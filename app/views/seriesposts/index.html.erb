@@ -7,6 +7,9 @@
 
     <%= search_form_for @search do |f| %>
         <div class="field">
+          <%= link_to "Create", new_seriespost_path %>
+        </div>
+        <div class="field">
           <%= f.label :year_gteq, "Years From, To" %><br />
           <%= f.search_field :year_gteq, :class => "sfield" %>
           <%= f.search_field :year_lteq, :class => "sfield" %>
@@ -34,9 +37,8 @@
           <%= f.search_field :losses_lteq, :class => "sfield" %>
         </div>
         <div class="field">
-          <%= f.label :winnersGoals_gteq, "Winner's Goals From, To" %><br />
+          <%= f.label :winnersGoals_gteq, "Winner's Goals" %><br />
           <%= f.search_field :winnersGoals_gteq, :class => "sfield" %>
-          <%= f.search_field :winnersGoals_lteq, :class => "sfield" %>
         </div>
         <br />
         <br />

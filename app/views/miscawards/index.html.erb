@@ -7,6 +7,9 @@
 
   <%= search_form_for @search do |f| %>
     <div class="field">
+      <%= link_to "Create", new_miscaward_path %>
+    </div>
+    <div class="field">
       <%= f.label :name_cont, "Name" %><br />
       <%= f.search_field :name_cont, :class => "sfield" %>
     </div>

@@ -7,6 +7,9 @@
 
   <%= search_form_for @search do |f| %>
     <div class="field">
+      <%= link_to "Create", new_goaly_path %>
+    </div>
+    <div class="field">
       <%= f.label :year_gteq, "Years From, To" %><br />
       <%= f.search_field :year_gteq, :class => "sfield" %>
       <%= f.search_field :year_lteq, :class => "sfield" %>
