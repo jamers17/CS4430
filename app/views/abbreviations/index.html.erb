@@ -2,28 +2,39 @@
 
 <% content_for :query do %>
     <h1>Abbreviations</h1>
+
+    <%= search_form_for @search do |f| %>
+        <div class="field">
+          <%= f.label :abrv_cont, "Abreviation" %><br />
+          <%= f.search_field :abrv_cont %>
+        </div>
+        <div class="field">
+          <%= f.label :fullName_cont, "Spelled Out" %><br />
+          <%= f.search_field :fullName_cont %>
+        </div>
+        <br />
+        <br />
+        <div class="actions"><%= f.submit "Search", :class => "button" %></div>
+    <% end %>
 <% end %>
 
 
 <table>
   <thead>
     <tr>
-      <th>Type</th>
-      <th>Abbreviation</th>
+      <th>Category</th>
+      <th>Abrv</th>
       <th>Fullname</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @abbreviations.each do |abbreviation| %>
-      <tr>
+    <% @abbreviation.each do |abbreviation| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td><%= abbreviation.category %></td>
         <td><%= abbreviation.abrv %></td>
         <td><%= abbreviation.fullName %></td>
-        <td><%= link_to 'Show', abbreviation %></td>
-        <td><%= link_to 'Edit', edit_abbreviation_path(abbreviation) %></td>
-        <td><%= link_to 'Destroy', abbreviation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

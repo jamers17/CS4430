@@ -5,7 +5,7 @@ class AbbreviationsController < ApplicationController
   # GET /abbreviations.json
   def index
     @search = Abbreviation.search(params[:q])
-    @teams = @search.result
+    @abbreviation = @search.result
   end
 
   # GET /abbreviations/1
@@ -70,6 +70,6 @@ class AbbreviationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def abbreviation_params
-      params.require(:abbreviation).permit(:type, :abbreviation, :fullName)
+      params.require(:abbreviation).permit(:categordy, :abrv, :fullName)
     end
 end
