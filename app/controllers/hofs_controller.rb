@@ -4,7 +4,8 @@ class HofsController < ApplicationController
   # GET /hofs
   # GET /hofs.json
   def index
-    @hofs = Hof.all
+    @search = Hof.search(params[:q])
+    @hofs = @search.result
   end
 
   # GET /hofs/1

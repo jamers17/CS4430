@@ -86,12 +86,12 @@ namespace :goaliecsvtask do
         require 'csv'
 
         CSV.foreach('tmp/abbrev.csv', :headers => true) do |row|
-          abbreviations = Abbreviations.new ({
-                                                type: row[0],
-                                                abbreviation: row[1],
+          abbreviation = Abbreviation.new ({
+                                                category: row[0],
+                                                abrv: row[1],
                                                 fullName: row[2]
                                             })
-          abbreviations.save!
+          abbreviation.save!
         end
     end
 
@@ -99,14 +99,14 @@ namespace :goaliecsvtask do
         require 'csv'
 
        CSV.foreach('tmp/AwardsMisc.csv', :headers => true) do |row|
-        miscawards = Miscawards.new ({
+        miscaward = Miscaward.new ({
                                         name: row[0],
                                         award: row[1],
                                         year: row[2],
                                         league: row[3],
                                         note: row[4]
                                     })
-        miscawards.save!
+        miscaward.save!
       end
     end
 

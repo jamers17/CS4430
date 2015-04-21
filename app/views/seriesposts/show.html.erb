@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @seriespost.year %>
+</p>
+
+<p>
+  <strong>Round:</strong>
+  <%= @seriespost.round %>
+</p>
+
+<p>
+  <strong>Series:</strong>
+  <%= @seriespost.series %>
+</p>
+
+<p>
+  <strong>Winnerteam:</strong>
+  <%= @seriespost.winnerTeam %>
+</p>
+
+<p>
+  <strong>Winnerteamleague:</strong>
+  <%= @seriespost.winnerTeamLeague %>
+</p>
+
+<p>
+  <strong>Loserteam:</strong>
+  <%= @seriespost.loserTeam %>
+</p>
+
+<p>
+  <strong>Loserteamleague:</strong>
+  <%= @seriespost.loserTeamLeague %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= @seriespost.wins %>
+</p>
+
+<p>
+  <strong>Losses:</strong>
+  <%= @seriespost.losses %>
+</p>
+
+<p>
+  <strong>Ties:</strong>
+  <%= @seriespost.ties %>
+</p>
+
+<p>
+  <strong>Winnersgoals:</strong>
+  <%= @seriespost.winnersGoals %>
+</p>
+
+<p>
+  <strong>Losersgoals:</strong>
+  <%= @seriespost.losersGoals %>
+</p>
+
+<%= link_to 'Edit', edit_seriespost_path(@seriespost) %> |
+<%= link_to 'Back', seriesposts_path %>

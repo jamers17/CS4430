@@ -1,0 +1,49 @@
+<%= form_for(@teamvsteam) do |f| %>
+  <% if @teamvsteam.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@teamvsteam.errors.count, "error") %> prohibited this teamvsteam from being saved:</h2>
+
+      <ul>
+      <% @teamvsteam.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.number_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :league %><br>
+    <%= f.text_field :league %>
+  </div>
+  <div class="field">
+    <%= f.label :team %><br>
+    <%= f.text_field :team %>
+  </div>
+  <div class="field">
+    <%= f.label :opposingTeam %><br>
+    <%= f.text_field :opposingTeam %>
+  </div>
+  <div class="field">
+    <%= f.label :wins %><br>
+    <%= f.number_field :wins %>
+  </div>
+  <div class="field">
+    <%= f.label :losses %><br>
+    <%= f.number_field :losses %>
+  </div>
+  <div class="field">
+    <%= f.label :ties %><br>
+    <%= f.number_field :ties %>
+  </div>
+  <div class="field">
+    <%= f.label :otl %><br>
+    <%= f.number_field :otl %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
