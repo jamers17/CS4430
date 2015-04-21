@@ -1,35 +1,51 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Miscawards</h1>
+<% content_for :query do %>
+
+  <h1>Awards, 1966-2013</h1>
+
+
+  <%= search_form_for @search do |f| %>
+    <div class="field">
+      <%= f.label :name_cont, "Name" %><br />
+      <%= f.search_field :name_cont %>
+    </div>
+    <div class="field">
+      <%= f.label :award_cont, "Award" %><br />
+      <%= f.search_field :award_cont %>
+    </div>
+    <div class="field">
+      <%= f.label :year_gteq, "Years From, To" %><br />
+      <%= f.search_field :year_gteq %>
+      <%= f.search_field :year_lteq %>
+    </div>
+    <br />
+    <br />
+    <div class="actions"><%= f.submit "Search", :class => "button" %></div>
+  <% end %>
+
+<% end %>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Award</th>
-      <th>Year</th>
-      <th>League</th>
-      <th>Note</th>
-      <th colspan="3"></th>
+      <th><%= sort_link @search, :name, "Name" %></th>
+      <th><%= sort_link @search, :award, "Award" %></th>
+      <th><%= sort_link @search, :year, "Year" %></th>
+      <th><%= sort_link @search, :league, "League" %></th>
+      <th><%= sort_link @search, :note, "Note" %></th>
     </tr>
   </thead>
 
   <tbody>
     <% @miscawards.each do |miscaward| %>
-      <tr>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td><%= miscaward.name %></td>
         <td><%= miscaward.award %></td>
         <td><%= miscaward.year %></td>
         <td><%= miscaward.league %></td>
         <td><%= miscaward.note %></td>
-        <td><%= link_to 'Show', miscaward %></td>
-        <td><%= link_to 'Edit', edit_miscaward_path(miscaward) %></td>
-        <td><%= link_to 'Destroy', miscaward, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Miscaward', new_miscaward_path %>

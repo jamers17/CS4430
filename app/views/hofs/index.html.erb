@@ -1,7 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <% content_for :query do %>
-  <h1>Listing Hofs</h1>
+
+  <h1>Hall of Fame</h1>
+
+  <%= search_form_for @search do |f| %>
+    <div class="field">
+      <%= f.label :name_cont, "Name" %><br />
+      <%= f.search_field :name_cont %>
+    </div>
+    <div class="field">
+      <%= f.label :year_gteq, "Years From, To" %><br />
+      <%= f.search_field :year_gteq %>
+      <%= f.search_field :year_lteq %>
+    </div>
+    <div class="field">
+      <%= f.label :category_cont, "Category" %><br />
+      <%= f.search_field :category_cont %>
+    </div>
+    <br />
+    <br />
+    <div class="actions"><%= f.submit "Search", :class => "button" %></div>
+  <% end %>
+
 <% end %>
 
 <table>
@@ -10,13 +31,12 @@
       <th><%= sort_link @search, :name, "Name" %></th>
       <th><%= sort_link @search, :year, "Year" %></th>
       <th><%= sort_link @search, :category, "Category" %></th>
-      <th colspan="3"></th>
-    </tr>
+          </tr>
   </thead>
 
   <tbody>
     <% @hofs.each do |hof| %>
-      <tr>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td><%= hof.name %></td>
         <td><%= hof.year %></td>
         <td><%= hof.category %></td>
