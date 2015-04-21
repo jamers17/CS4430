@@ -63,6 +63,7 @@
       <th><%= sort_link @search, :powerPlayGoalsAgainst, "Powerplay Goals Against" %></th>
       <th><%= sort_link @search, :penaltyKillChances, "Penalty Kill Chances" %></th>
       <th><%= sort_link @search, :shorthandedGoalsFor, "Shorthanded Goals For" %></th>
+      <th colspan="2">Administration</th>
     </tr>
   </thead>
   <tbody>
@@ -91,6 +92,8 @@
         <td><%= team.powerPlayGoalsAgainst %></td>
         <td><%= team.penaltyKillChances %></td>
         <td><%= team.shorthandedGoalsFor %></td>
+        <td><%= link_to 'Edit', edit_team_path(team), :class => "admin" %></td>
+        <td><%= link_to 'Destroy', team, method: :delete, data: {confirm: "Are you sure?" }, :class => "admin" %></td>
       </tr>
     <% end %>
   </tbody>

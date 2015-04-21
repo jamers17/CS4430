@@ -1,57 +1,41 @@
 
 
-
 <% content_for :query do %>
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-      p,h2 {
-          text-align: left;
-          padding-left: 1em;
-      }
-          ul.intro li {
-              text-align: left;
-              padding-left: 1em;
-          }
-  </style>
-</head>
-
-<h2>Doing the groundwork</h2>
-<p>One of our early obstacles we had to overcome was actually obtaining valid data for out project.
- With a Google search many sources will appear that will gladly charge you for access to their api's.
-We contacted multiple companies informing them of our school project, and a few were willing to give us a discount
-but no one was willing to hand out anything. Eventually we stumbled upon another school project that hand sourced most of their records
-over a series of years.</p>
-<h2>Laying the foundation</h2>
-<p>We both are currently in CS 3500  which is a web technologies course focusing on Ruby on Rails. After little experience
-on the platform we both decided that it was an obvious choice for our hockey statistics web application.</p>
-<h2>Overcoming the complications</h2>
-<ul class = "intro">
-  <li>Processing the .csv files</li>
-    <ul>
-      <li>We first tried reformatting each csv into "test" data format specified by rails this proved to be exceptionally time consuming and buggy </li>
-      <li>We then were able to write a rails rake task to handle with for us</li>
+  <div class="intro">
+    <h2>Doing the Groundwork</h2>
+    <p>The first challenge we faced was obtaining valid, well formatted data. In particular, most of the data sites we found were only willing to sell us data. We contacted multiple companies informing them of our school project, and a few were willing to give us a discount, but no one was willing to hand out anything. Eventually we stumbled upon another school project that hand sourced most of their records
+    over a series of years.</p>
+    <h2>Laying the Foundation</h2>
+    <p>We both are currently in CS 3500, web technologies, which focuses on Ruby on Rails. Rails is an environment which couples the MVC design with database support. After a little experience
+    on the platform we both decided that it was an obvious choice for our hockey statistics web application.</p>
+    <h2>Overcoming the Complications</h2>
+    <ul class = "list">
+      <li>Processing the .csv files</li>
+        <ul>
+          <li>We first tried hand reformatting each .csv file into "test" data format specified by rails. This proved to be exceptionally time consuming and error-prone </li>
+          <li>We then were able to write a rails rake task, a type of internal script, to handle the inserting for us</li>
+        </ul>
+      <li>Thoughtful Database Application</li>
+        <ul>
+          <li>We carefully considered the most appropriate data from each model to include for readability</li>
+        </ul>
+      <li>Managing git as a Team</li>
+        <ul>
+          <li>Establishing a proper workflow was a key factor in our success</li>
+        </ul>
+      <li>Learning curve of rails</li>
+      <ul>
+        <li>How to link it with MySQL vs SQLlite</li>
+        <li>How rails interacts with MySQL</li>
+        <li>How to write our own rake tasks</li>
+        <li>How MVC programming works</li>
+        <li>How to find Ruby Gems and utilize them</li>
+      </ul>
     </ul>
-  <li>Being thoughtful with DB order</li>
-    <ul>
-      <li>We carefully considered the order that the data should appear in each table in order to be the most self explainatory to our users</li>
-    </ul>
-  <li>Managing git as a team</li>
-  <li>Learning curve of rails</li>
-  <ul>
-    <li>We had to learn how to link it with MySQL vs SQLlite</li>
-    <li>We had to learn how rails interacts with MySQL</li>
-    <li>We had to learn how to write our own rake tasks</li>
-    <li>We had to learn how MVC programming works</li>
-    <li>We had to learn how to find Ruby Gems and utilize them</li>
-  </ul>
-</ul>
 
-<h2>Our Statistics</h2>
-<p>Records in Database: 34,199<br>MySql Community Version: 5.6.24<br>
-  Rails Version: 4.2.0 <br>Ruby Version: 2.2.1p85          </p>
-
-</html>
-
+    <h2>Our Statistics</h2>
+    <p>Records in Database: 34,199<br>MySql Community Version: 5.6.24<br>
+      Rails Version: 4.2.0 <br>Ruby Version: 2.2.1p85          </p>
+  </div>
 <% end %>
+

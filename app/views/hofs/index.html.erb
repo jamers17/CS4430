@@ -34,7 +34,8 @@
       <th><%= sort_link @search, :name, "Name" %></th>
       <th><%= sort_link @search, :year, "Year" %></th>
       <th><%= sort_link @search, :category, "Category" %></th>
-          </tr>
+      <th colspan="2">Administration</th>
+    </tr>
   </thead>
 
   <tbody>
@@ -43,6 +44,8 @@
         <td><%= hof.name %></td>
         <td><%= hof.year %></td>
         <td><%= hof.category %></td>
+        <td><%= link_to 'Edit', edit_hof_path(hof), :class => "admin" %></td>
+        <td><%= link_to 'Destroy', hof, method: :delete, data: {confirm: "Are you sure?" }, :class => "admin" %></td>
       </tr>
     <% end %>
   </tbody>

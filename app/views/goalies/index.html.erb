@@ -67,6 +67,7 @@
       <th><%= sort_link @search, :pim, "Penalty Minutes" %></th>
       <th><%= sort_link @search, :firstname, "First Name" %></th>
       <th><%= sort_link @search, :lastname, "Last Name" %></th>
+      <th colspan="2">Administration</th>
     </tr>
   </thead>
 
@@ -95,6 +96,8 @@
         <td><%= goalie.pim %></td>
         <td><%= goalie.firstname %></td>
         <td><%= goalie.lastname %></td>
+        <td><%= link_to 'Edit', edit_goaly_path(goalie), :class => "admin" %></td>
+        <td><%= link_to 'Destroy', goalie, method: :delete, data: {confirm: "Are you sure?" }, :class => "admin" %></td>
       </tr>
     <% end %>
   </tbody>

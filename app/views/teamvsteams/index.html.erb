@@ -47,6 +47,7 @@
       <th><%= sort_link @search, :losses, "Losses" %></th>
       <th><%= sort_link @search, :ties, "Ties" %></th>
       <th><%= sort_link @search, :otl, "Otl" %></th>
+      <th colspan="2">Administration</th>
     </tr>
   </thead>
 
@@ -61,6 +62,8 @@
         <td><%= teamvsteam.losses %></td>
         <td><%= teamvsteam.ties %></td>
         <td><%= teamvsteam.otl %></td>
+        <td><%= link_to 'Edit', edit_teamvsteam_path(teamvsteam), :class => "admin" %></td>
+        <td><%= link_to 'Destroy', teamvsteam, method: :delete, data: {confirm: "Are you sure?" }, :class => "admin" %></td>
       </tr>
     <% end %>
   </tbody>

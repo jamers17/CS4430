@@ -23,6 +23,10 @@
   margin: 5px 0px 5px 0px;
   border-radius: 5px;
 
+  h1 {
+    color: yellow;
+  }
+
 /******************/
 /* BEGIN MENU CSS */
 /******************/
@@ -95,6 +99,7 @@
     color: #fff;
   }
 
+
   #query {
     height: 150px;
 
@@ -120,11 +125,34 @@
     height: 500px;
     overflow-y: auto;
 
+    .admin {
+      color: #000;
+    }
+
     table {
       width: 100%;
     }
   }
 
+}
+
+div.intro {
+  h2 {
+    border-bottom: 1px solid #222930;
+    text-align: left;
+    padding-left: 3em;
+    color: yellow;
+  }
+  p {
+    text-align: left;
+    padding-left: 2em;
+    padding-right: 2em;
+
+  }
+  ul.list li {
+    text-align: left;
+    padding-left: 1em;
+  }
 }
 
 footer {

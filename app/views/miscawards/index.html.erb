@@ -37,6 +37,7 @@
       <th><%= sort_link @search, :year, "Year" %></th>
       <th><%= sort_link @search, :league, "League" %></th>
       <th><%= sort_link @search, :note, "Note" %></th>
+      <th colspan="2">Administration</th>
     </tr>
   </thead>
 
@@ -48,6 +49,8 @@
         <td><%= miscaward.year %></td>
         <td><%= miscaward.league %></td>
         <td><%= miscaward.note %></td>
+        <td><%= link_to 'Edit', edit_miscaward_path(miscaward), :class => "admin" %></td>
+        <td><%= link_to 'Destroy', miscaward, method: :delete, data: {confirm: "Are you sure?" }, :class => "admin" %></td>
       </tr>
     <% end %>
   </tbody>

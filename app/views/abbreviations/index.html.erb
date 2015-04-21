@@ -33,6 +33,7 @@
       <th>Category</th>
       <th>Abrv</th>
       <th>Fullname</th>
+      <th colspan="2">Administration</th>
     </tr>
   </thead>
 
@@ -42,6 +43,8 @@
         <td><%= abbreviation.category %></td>
         <td><%= abbreviation.abrv %></td>
         <td><%= abbreviation.fullName %></td>
+        <td><%= link_to 'Edit', edit_abbreviation_path(abbreviation), :class => "admin" %></td>
+        <td><%= link_to 'Destroy', abbreviation, method: :delete, data: {confirm: "Are you sure?" }, :class => "admin" %></td>
       </tr>
     <% end %>
   </tbody>

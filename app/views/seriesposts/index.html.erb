@@ -2,7 +2,7 @@
 
 <% content_for :query do %>
 
-    <h1>Post Series</h1>
+    <h1>Playoff Series</h1>
 
 
     <%= search_form_for @search do |f| %>
@@ -61,6 +61,7 @@
       <th><%= sort_link @search, :year, "Ties" %></th>
       <th><%= sort_link @search, :year, "Goals By Winner" %></th>
       <th><%= sort_link @search, :year, "Goals By Loser" %></th>
+      <th colspan="2">Administration</th>
     </tr>
   </thead>
 
@@ -79,6 +80,8 @@
         <td><%= seriespost.ties %></td>
         <td><%= seriespost.winnersGoals %></td>
         <td><%= seriespost.losersGoals %></td>
+        <td><%= link_to 'Edit', edit_seriespost_path(seriespost), :class => "admin" %></td>
+        <td><%= link_to 'Destroy', seriespost, method: :delete, data: {confirm: "Are you sure?" }, :class => "admin" %></td>
       </tr>
     <% end %>
   </tbody>
