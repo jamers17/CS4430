@@ -5,11 +5,8 @@ class AbbreviationsController < ApplicationController
   # GET /abbreviations.json
   def index
     @search = Abbreviation.search(params[:q])
-<<<<<<< HEAD
     @abbreviation = @search.result
-=======
     @abbreviations = @search.result
->>>>>>> 4d45329e7e0ef75536eb91805272a5a084b03900
   end
 
   # GET /abbreviations/1
