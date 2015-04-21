@@ -1,20 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <% content_for :query do %>
-    <h1>Abbreviations</h1>
+    <h1>Abbreviations</h1> 
 
+        
     <%= search_form_for @search do |f| %>
         <div class="field">
+          <%= link_to "Create", new_abbreviation_path %>
+        </div>
+        <div class="field">
           <%= f.label :abrv_cont, "Abreviation" %><br />
-          <%= f.search_field :abrv_cont %>
+          <%= f.search_field :abrv_cont, :class => "sfield" %>
         </div>
         <div class="field">
           <%= f.label :fullName_cont, "Spelled Out" %><br />
-          <%= f.search_field :fullName_cont %>
+          <%= f.search_field :fullName_cont, :class => "sfield" %>
         </div>
         <br />
         <br />
-        <div class="actions"><%= f.submit "Search", :class => "button" %></div>
+        <div class="actions">
+          <%= f.submit "Search", :class => "button" %><br />
+        </div>
+          
+
     <% end %>
 <% end %>
 
@@ -38,7 +46,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Abbreviation', new_abbreviation_path %>

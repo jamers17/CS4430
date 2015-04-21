@@ -7,36 +7,38 @@
 
     <%= search_form_for @search do |f| %>
         <div class="field">
+          <%= link_to "Create", new_seriespost_path %>
+        </div>
+        <div class="field">
           <%= f.label :year_gteq, "Years From, To" %><br />
-          <%= f.search_field :year_gteq %>
-          <%= f.search_field :year_lteq %>
+          <%= f.search_field :year_gteq, :class => "sfield" %>
+          <%= f.search_field :year_lteq, :class => "sfield" %>
         </div>
         <div class="field">
           <%= f.label :round_cont, "Round" %><br />
-          <%= f.search_field :round_cont %>
+          <%= f.search_field :round_cont, :class => "sfield" %>
         </div>
         <div class="field">
           <%= f.label :winnerTeam_cont, "Winning Team" %><br />
-          <%= f.search_field :winnerTeam_cont %>
+          <%= f.search_field :winnerTeam_cont, :class => "sfield" %>
         </div>
         <div class="field">
           <%= f.label :loserTeam_cont, "Losing Team" %><br />
-          <%= f.search_field :loserTeam_cont %>
+          <%= f.search_field :loserTeam_cont, :class => "sfield" %>
         </div>
         <div class="field">
-          <%= f.label :wins_gteq, "Wins" %><br />
-          <%= f.search_field :wins_gteq %>
-          <%= f.search_field :wins_lteq %>
+          <%= f.label :wins_gteq, "Wins From, To" %><br />
+          <%= f.search_field :wins_gteq, :class => "sfield" %>
+          <%= f.search_field :wins_lteq, :class => "sfield" %>
         </div>
         <div class="field">
-          <%= f.label :losses_gteq, "Losses" %><br />
-          <%= f.search_field :losses_gteq %>
-          <%= f.search_field :losses_lteq %>
+          <%= f.label :losses_gteq, "Losses From, To" %><br />
+          <%= f.search_field :losses_gteq, :class => "sfield" %>
+          <%= f.search_field :losses_lteq, :class => "sfield" %>
         </div>
         <div class="field">
           <%= f.label :winnersGoals_gteq, "Winner's Goals" %><br />
-          <%= f.search_field :winnersGoals_gteq %>
-          <%= f.search_field :winnersGoals_lteq %>
+          <%= f.search_field :winnersGoals_gteq, :class => "sfield" %>
         </div>
         <br />
         <br />
