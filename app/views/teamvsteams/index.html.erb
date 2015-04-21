@@ -7,24 +7,24 @@
   <%= search_form_for @search do |f| %>
     <div class="field">
       <%= f.label :year_gteq, "Years From, To" %><br />
-      <%= f.search_field :year_gteq %>
-      <%= f.search_field :year_lteq %>
+      <%= f.search_field :year_gteq, :class => "sfield" %>
+      <%= f.search_field :year_lteq, :class => "sfield" %>
     </div>
     <div class="field">
       <%= f.label :team_cont, "Primary Team" %><br />
-      <%= f.search_field :team_cont %>
+      <%= f.search_field :team_cont, :class => "sfield" %>
     </div>
     <div class="field">
       <%= f.label :opposingTeam_cont, "Opposing Team" %><br />
-      <%= f.search_field :opposingTeam_cont %>
+      <%= f.search_field :opposingTeam_cont, :class => "sfield" %>
     </div>
     <div class="field">
       <%= f.label :wins_gteq, "Wins" %><br />
-      <%= f.search_field :wins_gteq %>
+      <%= f.search_field :wins_gteq, :class => "sfield" %>
     </div>
     <div class="field">
       <%= f.label :losses_gteq, "Losses" %><br />
-      <%= f.search_field :losses_gteq %>
+      <%= f.search_field :losses_gteq, :class => "sfield" %>
     </div>
     <br />
     <br />
