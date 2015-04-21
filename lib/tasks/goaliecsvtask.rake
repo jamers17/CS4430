@@ -70,19 +70,45 @@ namespace :goaliecsvtask do
     end
 
     task :hoftask => :environment do
-        require 'csv'
+      require 'csv'
 
-        CSV.foreach('tmp/HOF.csv', :headers => true) do |row|
-          hof = Hof.new ({
-                            name: row[0],
-                            year: row[1],
-                            category: row[2]
-                        })
-          hof.save!
-        end
+      CSV.foreach('/tmp/HOF.csv', :headers => true) do |row|
+        hof = Hof.new ({
+          name: row[0],
+          year: row[1],
+          category: row[2]
+        })
+        hof.save!
+      end
     end
 
     task :abbreviationstask => :environment do
+<<<<<<< HEAD
+      require 'csv'
+
+      CSV.foreach('/tmp/abbrev.csv', :headers => true) do |row|
+        abbreviations = Abbreviation.new ({
+          category: row[0],
+          abrv: row[1],
+          fullName: row[2]
+        })
+        abbreviations.save!
+      end
+    end
+
+    task :miscawardstask => :environment do
+      require 'csv'
+
+        CSV.foreach('/tmp/AwardsMisc.csv', :headers => true) do |row|
+        miscawards = Miscaward.new ({
+          name: row[0],
+          award: row[1],
+          year: row[2],
+          league: row[3],
+          note: row[4]
+        })
+        miscawards.save!
+=======
         require 'csv'
 
         CSV.foreach('tmp/abbrev.csv', :headers => true) do |row|
@@ -107,48 +133,47 @@ namespace :goaliecsvtask do
                                         note: row[4]
                                     })
         miscaward.save!
+>>>>>>> 00cd9560e4eb71a15c329eb8f5889a9ce2f9eeb6
       end
     end
 
     task :teamvsteamtask => :environment do
-        require 'csv'
+      require 'csv'
 
-      CSV.foreach('tmp/TeamVsTeam.csv', :headers => true) do |row|
+      CSV.foreach('/tmp/TeamVsTeam.csv', :headers => true) do |row|
         teamvsteam = Teamvsteam.new ({
-                                        year: row[0],
-                                        league: row[1],
-                                        team: row[2],
-                                        opposingTeam: row[3],
-                                        wins: row[4],
-                                        losses: row[5],
-                                        ties: row[6],
-                                        otl: row[7]
-                                    })
+          year: row[0],
+          league: row[1],
+          team: row[2],
+          opposingTeam: row[3],
+          wins: row[4],
+          losses: row[5],
+          ties: row[6],
+          otl: row[7]
+        })
         teamvsteam.save!
-
       end
     end
 
     task :seriesposttask => :environment do
-        require 'csv'
+      require 'csv'
 
-        CSV.foreach('tmp/SeriesPost.csv', :headers => true) do |row|
-          seriespost = Seriespost.new ({
-                                          year: row[0],
-                                          round: row[1],
-                                          series: row[2],
-                                          winnerTeam: row[3],
-                                          winnerTeamLeague: row[4],
-                                          loserTeam: row[5],
-                                          loserTeamLeague: row[6],
-                                          wins: row[7],
-                                          losses: row[8],
-                                          ties: row[9],
-                                          winnersGoals: row[10],
-                                          losersGoals: row[11],
-                                      })
-          seriespost.save!
+      CSV.foreach('/tmp/SeriesPost.csv', :headers => true) do |row|
+        seriespost = Seriespost.new ({
+          year: row[0],
+          round: row[1],
+          series: row[2],
+          winnerTeam: row[3],
+          winnerTeamLeague: row[4],
+          loserTeam: row[5],
+          loserTeamLeague: row[6],
+          wins: row[7],
+          losses: row[8],
+          ties: row[9],
+          winnersGoals: row[10],
+          losersGoals: row[11],
+        })
+        seriespost.save!
         end
-
     end
 end
