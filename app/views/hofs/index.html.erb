@@ -1,13 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Hofs</h1>
+<% content_for :query do %>
+  <h1>Listing Hofs</h1>
+<% end %>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Year</th>
-      <th>Category</th>
+      <th><%= sort_link @search, :name, "Name" %></th>
+      <th><%= sort_link @search, :year, "Year" %></th>
+      <th><%= sort_link @search, :category, "Category" %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,14 +20,7 @@
         <td><%= hof.name %></td>
         <td><%= hof.year %></td>
         <td><%= hof.category %></td>
-        <td><%= link_to 'Show', hof %></td>
-        <td><%= link_to 'Edit', edit_hof_path(hof) %></td>
-        <td><%= link_to 'Destroy', hof, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Hof', new_hof_path %>

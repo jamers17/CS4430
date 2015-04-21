@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @abbreviation.type %>
+</p>
+
+<p>
+  <strong>Abbreviation:</strong>
+  <%= @abbreviation.abbreviation %>
+</p>
+
+<p>
+  <strong>Fullname:</strong>
+  <%= @abbreviation.fullName %>
+</p>
+
+<%= link_to 'Edit', edit_abbreviation_path(@abbreviation) %> |
+<%= link_to 'Back', abbreviations_path %>

@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :seriesposts
+
+  resources :teamvsteams
+
+  resources :miscawards
+
+  resources :abbreviations
+
   resources :hofs
 
   resources :teams 

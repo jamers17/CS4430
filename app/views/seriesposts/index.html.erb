@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Seriesposts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Round</th>
+      <th>Series</th>
+      <th>Winnerteam</th>
+      <th>Winnerteamleague</th>
+      <th>Loserteam</th>
+      <th>Loserteamleague</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Ties</th>
+      <th>Winnersgoals</th>
+      <th>Losersgoals</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @seriesposts.each do |seriespost| %>
+      <tr>
+        <td><%= seriespost.year %></td>
+        <td><%= seriespost.round %></td>
+        <td><%= seriespost.series %></td>
+        <td><%= seriespost.winnerTeam %></td>
+        <td><%= seriespost.winnerTeamLeague %></td>
+        <td><%= seriespost.loserTeam %></td>
+        <td><%= seriespost.loserTeamLeague %></td>
+        <td><%= seriespost.wins %></td>
+        <td><%= seriespost.losses %></td>
+        <td><%= seriespost.ties %></td>
+        <td><%= seriespost.winnersGoals %></td>
+        <td><%= seriespost.losersGoals %></td>
+        <td><%= link_to 'Show', seriespost %></td>
+        <td><%= link_to 'Edit', edit_seriespost_path(seriespost) %></td>
+        <td><%= link_to 'Destroy', seriespost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Seriespost', new_seriespost_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @miscaward.name %>
+</p>
+
+<p>
+  <strong>Award:</strong>
+  <%= @miscaward.award %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @miscaward.year %>
+</p>
+
+<p>
+  <strong>League:</strong>
+  <%= @miscaward.league %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @miscaward.note %>
+</p>
+
+<%= link_to 'Edit', edit_miscaward_path(@miscaward) %> |
+<%= link_to 'Back', miscawards_path %>

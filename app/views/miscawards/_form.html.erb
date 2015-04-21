@@ -1,0 +1,37 @@
+<%= form_for(@miscaward) do |f| %>
+  <% if @miscaward.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@miscaward.errors.count, "error") %> prohibited this miscaward from being saved:</h2>
+
+      <ul>
+      <% @miscaward.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :award %><br>
+    <%= f.text_field :award %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.number_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :league %><br>
+    <%= f.text_field :league %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br>
+    <%= f.text_field :note %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: 1
+  round: MyString
+  series: MyString
+  winnerTeam: MyString
+  winnerTeamLeague: MyString
+  loserTeam: MyString
+  loserTeamLeague: MyString
+  wins: 1
+  losses: 1
+  ties: 1
+  winnersGoals: 1
+  losersGoals: 1
+
+two:
+  year: 1
+  round: MyString
+  series: MyString
+  winnerTeam: MyString
+  winnerTeamLeague: MyString
+  loserTeam: MyString
+  loserTeamLeague: MyString
+  wins: 1
+  losses: 1
+  ties: 1
+  winnersGoals: 1
+  losersGoals: 1

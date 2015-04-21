@@ -11,11 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150420234105) do
-=======
-ActiveRecord::Schema.define(version: 20150420232519) do
->>>>>>> a9ba9157a18f6bd99c69b0b64c56632c156ba82c
+ActiveRecord::Schema.define(version: 20150421000138) do
+
+  create_table "abbreviations", force: :cascade do |t|
+    t.string   "category",   limit: 255
+    t.string   "abrv",       limit: 255
+    t.string   "fullName",   limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "goalies", force: :cascade do |t|
     t.boolean  "playoffs",   limit: 1
@@ -52,6 +56,33 @@ ActiveRecord::Schema.define(version: 20150420232519) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "miscawards", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "award",      limit: 255
+    t.integer  "year",       limit: 4
+    t.string   "league",     limit: 255
+    t.string   "note",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "seriesposts", force: :cascade do |t|
+    t.integer  "year",             limit: 4
+    t.string   "round",            limit: 255
+    t.string   "series",           limit: 255
+    t.string   "winnerTeam",       limit: 255
+    t.string   "winnerTeamLeague", limit: 255
+    t.string   "loserTeam",        limit: 255
+    t.string   "loserTeamLeague",  limit: 255
+    t.integer  "wins",             limit: 4
+    t.integer  "losses",           limit: 4
+    t.integer  "ties",             limit: 4
+    t.integer  "winnersGoals",     limit: 4
+    t.integer  "losersGoals",      limit: 4
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
   create_table "teams", force: :cascade do |t|
     t.integer  "year",                    limit: 4
     t.string   "teamName",                limit: 255
@@ -78,6 +109,19 @@ ActiveRecord::Schema.define(version: 20150420232519) do
     t.integer  "shorthandedGoalsFor",     limit: 4
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+  end
+
+  create_table "teamvsteams", force: :cascade do |t|
+    t.integer  "year",         limit: 4
+    t.string   "league",       limit: 255
+    t.string   "team",         limit: 255
+    t.string   "opposingTeam", limit: 255
+    t.integer  "wins",         limit: 4
+    t.integer  "losses",       limit: 4
+    t.integer  "ties",         limit: 4
+    t.integer  "otl",          limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end

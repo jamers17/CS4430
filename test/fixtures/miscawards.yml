@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  award: MyString
+  year: 1
+  league: MyString
+  note: MyString
+
+two:
+  name: MyString
+  award: MyString
+  year: 1
+  league: MyString
+  note: MyString
